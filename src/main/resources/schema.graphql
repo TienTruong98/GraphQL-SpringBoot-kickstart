@@ -1,0 +1,27 @@
+type User {
+    username: String!
+    password: String!
+    lastname: String
+    role: Boolean!
+}
+
+input UserInput{
+    username: String!
+    password: String!
+    lastname: String
+    role: Boolean!
+}
+
+type Query{
+    usersByUsername(username:String!):User
+    allUsers: [User]
+}
+
+type Mutation{
+    addUser(user: UserInput):User
+}
+
+schema {
+    query: Query
+    mutation: Mutation
+}
