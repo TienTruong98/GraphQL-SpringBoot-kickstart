@@ -1,7 +1,7 @@
 package com.tientt.graphqlkickstater.resolvers;
 
-import com.tientt.graphqlkickstater.entities.User;
-import com.tientt.graphqlkickstater.entities.UserInput;
+import com.tientt.graphqlkickstater.pojo.entities.User;
+import com.tientt.graphqlkickstater.pojo.UserInput;
 import com.tientt.graphqlkickstater.services.UserService;
 import graphql.kickstart.tools.GraphQLMutationResolver;
 import org.springframework.beans.factory.annotation.Autowired;

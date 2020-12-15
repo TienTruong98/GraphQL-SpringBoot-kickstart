@@ -1,8 +1,9 @@
 type User {
     username: String!
     password: String!
-    lastname: String
-    role: Boolean!
+    fullname: String
+    enable: Boolean!
+    schedules: [Schedule]
 }
 
 input UserInput{
@@ -12,9 +13,21 @@ input UserInput{
     role: Boolean!
 }
 
+type Schedule{
+    id: Int!
+    #Using Float for Long type in Java
+    beginTime: Float
+    endTime: Float
+    note: String
+    userID: String!
+}
+
 type Query{
     usersByUsername(username:String!):User
     allUsers: [User]
+    scheduleByUserID(userID:String!):[Schedule]
+    scheduleByUserIDInRange(userID:String beginTime:Float! endTime:Float!):[Schedule]
+
 }
 
 type Mutation{
