@@ -1,4 +1,4 @@
-package com.tientt.graphqlkickstater.entities;
+package com.tientt.graphqlkickstater.pojo;
 
 import lombok.Data;
 
